@@ -1,25 +1,18 @@
 # openssl
 openssl commands to create local CA, Intermediate, Server and Client certificates using openssl configuration files.
 
-# Preparation
-
-Below script create the folder structure for CA and Intermediate certificates.
-
-```
-./prepareFolders.sh
-```
 
 
 # Root CA
 
 ```
-./createCA.sh
+./createCA.sh yourComapanyName
 ```
 
 # Intermediate CA
 
 ```
-./createIntermediate.sh yourIntermediateName
+./createIntermediate.sh yourComapanyName yourIntermediateName
 ```
 
 # Certificates
@@ -27,13 +20,13 @@ Below script create the folder structure for CA and Intermediate certificates.
 ## Server
 
 ```
-./createCertificate-server.sh yourIntermediateName www.your-server-name.com
+./createCertificate-server.sh yourComapanyName yourIntermediateName www.your-server-name.com
 ```
 
 ## Client
 
 ```
-./createCertificate-client.sh yourIntermediateName clientName
+./createCertificate-client.sh yourComapanyName yourIntermediateName clientName
 ```
 
 # Resources
